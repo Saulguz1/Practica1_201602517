@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Commit Branch') {
       steps {
-        sh 'git add -A && git commit -m "jenkins" && git push'
+        sh 'git add -A && git commit -m \"jenkins\" && git push'
       }
     }
     stage('Change Branch Main') {
