@@ -11,24 +11,14 @@ pipeline {
         sh 'cd minipractica1 && npm i -D'
       }
     }
-    stage('Commit Branch') {
-      steps {
-        sh 'git add -A && git commit -m \"jenkins\" && git push'
-      }
-    }
-    stage('Change Branch Main') {
-      steps {
-        sh 'git checkout main'
-      }
-    }
     stage('Run tests') {
       steps {
-        sh 'ng test'
+        sh 'cd minipractica1 && ng test'
       }
     }
     stage('Deploy develop in Main') {
       steps {
-        sh 'git merge develop'
+        sh 'git merge main'
       }
     }
   }
