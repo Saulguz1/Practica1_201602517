@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Install Dependences') {
       steps {
-        sh 'npm i -D'
+        sh 'npm i'
       }
     }
     stage('Change Branch Main') {
