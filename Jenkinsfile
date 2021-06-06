@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Install Dependences') {
       steps {
-        sh 'cd minipractica1 && npm i'
+        sh 'cd minipractica1 && npm i -D'
       }
     }
     stage('Change Branch Main') {
