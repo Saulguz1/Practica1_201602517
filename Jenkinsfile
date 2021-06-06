@@ -1,25 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Move Folder App') {
-      steps {
-        sh 'cd minipractica1'
-      }
-    }
     stage('Install Dependences') {
       steps {
-        sh 'cd minipractica1 && npm i -D'
+        sh 'npm i -D'
       }
     }
     stage('Run tests') {
       steps {
-        sh 'cd minipractica1 && ng test'
+        sh 'npm test'
       }
     }
-    stage('Deploy develop in Main') {
+    stage('Deploy') {
       steps {
-        sh 'git merge main'
+        sh 'git checkout origin/main && git merge origin/develop && git add . && git commit -am "Deploy Jenkins"'
       }
     }
+    
   }
 }
