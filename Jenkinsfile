@@ -3,27 +3,27 @@ pipeline {
   stages {
     stage('Move Folder App') {
       steps {
-        bat 'cd minipractica1'
+        sh 'cd minipractica1'
       }
     }
     stage('Install Dependences') {
       steps {
-        bat 'npm i -D'
+        sh 'npm i -D'
       }
     }
     stage('Change Branch Main') {
       steps {
-        bat 'git checkout main'
+        sh 'git checkout main'
       }
     }
     stage('Run tests') {
       steps {
-        bat 'ng test'
+        sh 'ng test'
       }
     }
     stage('Deploy develop in Main') {
       steps {
-        bat 'git merge develop'
+        sh 'git merge develop'
       }
     }
   }
