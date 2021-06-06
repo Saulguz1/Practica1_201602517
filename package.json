@@ -1,0 +1,24 @@
+{
+  "name": "Practica1_201602517",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saulguz1/Practica1_201602517.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saulguz1/Practica1_201602517/issues"
+  },
+  "homepage": "https://github.com/Saulguz1/Practica1_201602517#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0"
+  }
+}
