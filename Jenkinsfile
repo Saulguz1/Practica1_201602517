@@ -6,7 +6,7 @@ pipeline {
         sh 'npm i -D'
       }
     }
-    stage('Run tests') {
+    stage('Run tests mocha/chai') {
       steps {
         sh 'npm test'
       }
