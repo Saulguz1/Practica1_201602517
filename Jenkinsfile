@@ -11,6 +11,11 @@ pipeline {
         sh 'cd minipractica1 && npm i -D'
       }
     }
+    stage('Commit Branch') {
+      steps {
+        sh 'git add -A && git commit -m "jenkins" && git push'
+      }
+    }
     stage('Change Branch Main') {
       steps {
         sh 'git checkout main'
