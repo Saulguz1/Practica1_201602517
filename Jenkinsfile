@@ -11,7 +11,7 @@ pipeline {
         sh 'npm test'
       }
     } 
-    stage('Deploy') {
+    stage('Deploy and Merge') {
       steps {
         sh 'git checkout origin/main && git merge origin/develop && git add -A && git commit -am "Deploy Jenkins"'
       }
