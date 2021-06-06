@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('Move Folder App') {
+      steps {
+        bat 'cd minipractica1'
+      }
+    }
     stage('Install Dependences') {
       steps {
         bat 'npm i -D'
