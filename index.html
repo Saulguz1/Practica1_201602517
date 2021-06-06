@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Guatemalan Hands</title>
+        <title>Practica1-201602517</title>
+        <script src="js/funciones.js"></script>
         <link href="css/styles.css" rel="stylesheet" />
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
@@ -22,7 +23,7 @@
         </style>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Guatemalan Hands</a>
+            <a class="navbar-brand" href="index.html">Primos SA</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -87,77 +88,40 @@
 
 
 
-                        <h1 style="color:white"></h1>
-     
-                        <div class="container">
+
+                        <div id="layoutAuthentication_content">
+                            <main>
+                                <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-lg-7">
                                             <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Guatemalan Hands Publica</h3></div>
+                                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Verificar si un numero es Primo</h3></div>
                                                 <div class="card-body">
-                                                    La empresa Guatemalan Hands, se dedica a la fabricación y venta de artesanía y textiles a nivel nacional .
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                         </div>
-                                         
-                                            <div class="container-fluid"> 
-                                                <div class="card mb-4">
-                                              
-                                                </div>
-                                            
-                              
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <div class="card mb-4">
-                                                            <div class="card-header">
-                                                                <i class="fas fa-chart-bar mr-1"></i>
-                                                                Mision
-                                                            </div>
-                                                            <div class="card-body">
-                                                            <img height="300" width="430" src="https://www.guatemala.com/fotos/2019/07/Exposicion-y-venta-de-artesanias-en-Antigua-Guatemala-885x500.jpg">
-                                                            <p></p>
-                                                            La característica más importante de nuestros productos es que es único y se identifica plenamente con la cultura guatemalteca.
-                                                           <p></p>
-                                                            <p>                                    También queremos revalorizar esta artesanía tan desvalorizada y que esté en el lugar que se merece en cuanto a reconocimiento por la ciudadanía. En nuestro caso pretendemos lelvar el producto a diferentes partes del mundo.
-                                                            </p>
-                                                            La producción artesanal tiene un componente cultural significativo, en cuanto constituye parte del patrimonio del país y fuente de difusión de nuestra cultura autóctona, sino que representa asimismo una actividad productiva sustentable que genera medios de vida aceptables a quien la ejerce.
-                        
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <div class="card mb-4">
-                                                            <div class="card-header">
-                                                                <i class="fas fa-chart-pie mr-1"></i>
-                                                                Vision
-                                                            </div>
-                                                            <div class="card-body">
-                                                            
-                                                            La empresa Guatemalan Hands pretende conseguir un crecimiento lento pero continuo, dando a conocer nuestro producto tanto en el mercado español como en el mercado internacional a través de:
-                                                                <p></p>    
-                                                            <p>
-                                                                   ¬ Asistencia ferias de artesanía, exposiciones, eventos, etc.
-                                                                </p>
-                                                                <p>
-                                                                   ¬ También en la búsqueda continua de nuevos mercados para comercializar nuestros productos (Hermandades, Empresas, Nuevos canales de distribución, etc.)
-                        
-                                                                </p>
-                                                                <p>
-                                                                   ¬  Explorar el mercado internacional y aprovechar cualquier oportunidad de negocio que se presente.
-                                                              
-                                                                </p>
-                                                                <p>
-                                                                   ¬ Desarrollo de un tienda virtual de venta en internet. 
-                                                                </p>
-                                                                <img height="300" width="430" src="http://aroundantigua.com/wp-content/uploads/2018/08/Artesanias-guatemaltecas-en-guatemala-around-antigua-guatemala-artesania-en-madera-v2.jpg">
-                                                            <p></p>
+                                                                <div class="form-group">
+                                                                    
+                                                                    <input class="form-control py-4" id="inputnum" type="number"   name="inputnum" />
                                                                 </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                                
+                                                            <div class="form-group mt-4 mb-0">
+                                                                
+                                                                <button class="btn btn-primary btn-block"  id="submit" onclick="myFunction()">Enviar</button>
+                                                                
+                                                            </div>
+                                                            <div class="form-group mt-4 mb-0">
+                                                                
+                                                                <label class="small mb-1" id="demo" ></label>
+                                                                
+                                                            </div>
+                                                   
+             
+                            
+                                                
                                             </div>
-                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
 
                         
                     </div>
