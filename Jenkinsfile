@@ -11,11 +11,15 @@ pipeline {
         sh 'npm test'
       }
     } 
-    stage('Deploy') {
+    stage('Status git') {
       steps {
-        sh 'git add . && git commit -am "first" && git checkout origin/main && git merge origin/develop && git add . && git commit -am "Deploy Jenkins"'
+        sh 'git status'
+      }
+    } 
+    stage('Deploy and Merge') {
+      steps {
+        sh 'git checkout origin/main && git merge origin/develop &&  git push origin main'
       }
     }
-    
   }
 }
