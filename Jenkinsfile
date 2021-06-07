@@ -26,6 +26,5 @@ pipeline {
         sh 'git checkout origin/main && git merge origin/develop && git add -A && git commit -am "Jenkins" && git push origin main'
       }
     }
-  
   }
 }
