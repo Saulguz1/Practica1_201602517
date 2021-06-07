@@ -16,11 +16,6 @@ pipeline {
         sh 'git status'
       }
     } 
-    stage('Commit author') {
-      steps {
-        sh 'git commit --amend --reset-author'
-      }
-    } 
     stage('Deploy and Merge') {
       steps {
         sh 'git checkout origin/main && git merge origin/develop && git add -A && git commit -am "Jenkins" && git push origin main'
