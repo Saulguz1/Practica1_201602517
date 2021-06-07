@@ -3,7 +3,6 @@ function myFunction() {
   document.getElementById("demo").innerHTML = primo(num);
   
 }
-
 function primo(numero) {
   for (var i = 2; i < numero; i++) {
     if (numero % i === 0) {

@@ -8,7 +8,7 @@ describe('Preubas SA', function () {
         it('numero', function (){
             var num = 5;
             fcn = func.funcionpr(5);
-            assert.equal(fcn,true);  
+            assert.equal(fcn,false);  
         })
     })
 })
