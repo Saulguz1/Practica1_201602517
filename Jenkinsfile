@@ -18,7 +18,7 @@ pipeline {
     }
     stage('Verificar instalacion') {
       steps {
-        sh 'docker --version && sudo docker-compose --verison -S && ng --version && node --version && npm --version'
+        sh 'docker --version && ng --version && node --version && npm --version'
       }
     }
     stage('Install Dependences') {
@@ -31,7 +31,7 @@ pipeline {
         sh 'cd Frontend && npm test'
       }
     } 
-    stage('Status git') {
+    stage('Deploy') {
       steps {
         sh 'git status' 
       }
