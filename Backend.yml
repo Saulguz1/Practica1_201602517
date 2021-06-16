@@ -1,0 +1,13 @@
+---
+
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Instalar Nodejs backend
+    apt: name=nodejs state=present
+  - name: Instalar npm backend
+    npm:
+      name: "npm@latest"
+      global: yes
+      state: present
+  
