@@ -8,7 +8,7 @@ function primo(numero) {
     if (numero % i === 0) {
       return false;
     }
-  }
+  } 
   return numero !== 1;
 }
 
