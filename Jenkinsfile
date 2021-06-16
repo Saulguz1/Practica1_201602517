@@ -1,11 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('Ansible Instalar Componentes') {
-      steps {
-        ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'grup.inv', playbook: 'Componentes.yml'
-      }
-    }
     stage('Ansible Framework Front') {
       steps {
         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'grup.inv', playbook: 'Frontend.yml'
@@ -18,7 +13,7 @@ pipeline {
     }
     stage('Verificar instalacion') {
       steps {
-        sh 'docker --version && ng --version && node --version && npm --version'
+        sh 'docker --version && sudo docker-compose --version && ng --version && node --version && npm --version'
       }
     }
     stage('Install Dependences') {

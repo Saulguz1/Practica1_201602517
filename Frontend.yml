@@ -3,6 +3,24 @@
 - hosts: webserv
   become: true
   tasks:
+  - name: Agregar Llave Docker Front
+    apt_key:
+      url: https://download.docker.com/linux/ubuntu/gpg
+      state: present
+  - name: Agregar Repositorio Docker
+    apt_repository:
+      repo: deb https://download.docker.com/linux/ubuntu bionic stable
+      state: present
+  - name: Instalar Docker
+    apt: update_cache=yes name=docker-ce state=latest
+
+  - name: Install docker-compose Front
+    remote_user: ubuntu
+    get_url: 
+      url : https://github.com/docker/compose/releases/download/1.25.1-rc1/docker-compose-Linux-x86_64
+      dest: /usr/local/bin/docker-compose
+      mode: 'u+x,g+x'
+
   - name: Instalar Nodejs frontend
     apt: name=nodejs state=present
   - name: Instalar NPM fronend
