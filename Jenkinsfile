@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Verificar instalacion') {
       steps {
-        sh 'docker --version && sudo docker-compose --version && ng --version && node --version && npm --version'
+        sh 'docker --version && ng --version && node --version && npm --version'
       }
     }
     stage('Install Dependences') {
