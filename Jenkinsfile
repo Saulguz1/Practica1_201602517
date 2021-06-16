@@ -16,10 +16,6 @@ pipeline {
         sh 'git status'
       }
     } 
-    stage('Deploy and Merge') {
-      steps {
-        sh 'git checkout origin/main && git merge origin/develop &&  git push origin main'
-      }
-    }
+   
   }
 }
