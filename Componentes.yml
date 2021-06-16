@@ -1,6 +1,6 @@
 ---
 
-- hosts: localhost
+- hosts: webserv
   become: true
   tasks:
   - name: Agregar claves jenkins

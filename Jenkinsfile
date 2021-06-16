@@ -3,17 +3,17 @@ pipeline {
   stages {
     stage('Ansible Instalar Componentes') {
       steps {
-        ansiblePlaybook installation: 'ansible2', playbook: 'Componentes.yml'
+        ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'grup.inv', playbook: 'Componentes.yml'
       }
     }
     stage('Ansible Framework Front') {
       steps {
-        ansiblePlaybook installation: 'ansible2', playbook: 'Frontend.yml'
+        ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'grup.inv', playbook: 'Frontend.yml'
       }
     }
     stage('Ansible Framework Back') {
       steps {
-        ansiblePlaybook installation: 'ansible2', playbook: 'Backend.yml'
+        ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'grup.inv', playbook: 'Backend.yml'
       }
     }
     stage('Verificar instalacion') {
