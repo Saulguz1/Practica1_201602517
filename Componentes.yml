@@ -23,13 +23,6 @@
   - name: Instalar Docker
     apt: update_cache=yes name=docker-ce state=latest
 
-  - name: Cambiar ubuntu al grupo docker
-    remote_user: ubuntu
-    user:
-      name: "ubuntu"
-      group: "docker"
-      append: yes
-
   - name: Install docker-compose
     remote_user: ubuntu
     get_url: 
