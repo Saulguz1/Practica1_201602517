@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Install Dependences') {
       steps {
-        sh 'npm i -D'
+        sh 'cd Frontend && npm i -D'
       }
     }
     stage('Run tests mocha/chai') {
       steps {
-        sh 'npm test'
+        sh 'cd Frontend && npm test'
       }
     } 
     stage('Status git') {
